@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 8 App</title>
+	<style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #a0a0a0;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+        }
+		
+		img:hover {
+            background: white;
+            box-shadow: 0px 0px 100px white;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button-container button {
+            margin: 0 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="{{ url_for('static', filename=path) }}">
+	<div class="button-container">
+        <button onclick="window.location.href='/dog'">Dog 🐕</button>
+        <button onclick="window.location.href='/cat'">Cat 🐈</button>
+		<button onclick="window.location.href='/bunny'">Bunny 🐇</button>
+    </div>
+</body>
+</html>
